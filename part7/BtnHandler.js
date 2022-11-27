@@ -89,12 +89,16 @@ function eventText(logText) {
         return"the planet begins to crack and glow before detonating";
     
     }
-    else if (eventId == 13) {//player destroys a planet
+    else if (eventId == 13) {//played losses expedition
         return"the signal of the expedition is lost";
     
     }
-    else if (eventId == 14) {//player destroys a planet
+    else if (eventId == 14) {//player sets off
         return"the expedition ship leaves for deep space";
+    
+    }
+    else if (eventId == 15) {//player sets off
+        return"the expedition ship returns from deep space";
     
     }
   }
