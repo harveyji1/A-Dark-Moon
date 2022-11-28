@@ -22,13 +22,7 @@ function buildPod()
     var collectBtn = document.getElementById("collectionBtn");
     var collectAmt = document.getElementById("collectionPodAmt");
     var ironAmt = document.getElementById("ironAmt");
-    if(parseInt(collectAmt.value) == 10) //limit pods to 10
-    {
-        collectBtn.style.opacity = "0.5";
-        collectBtn.disabled = true;
-        document.getElementById("podTT").style.display = "none";
-    }
-    else
+    if(collectAmt.value < 10)
     {
         if(ironAmt.value >= (10 + 10*collectAmt.value))
         {
@@ -42,6 +36,12 @@ function buildPod()
         document.getElementById("villageTable").style.display = "block";
         document.getElementById("collectionPodAmt").style.display = "block";
         document.getElementById("fuelAmt").style.display = "block";
+    }
+    if(collectAmt.value == 10)
+    {
+        collectBtn.style.opacity = "0.5";
+        collectBtn.disabled = true;
+        document.getElementById("podTT").style.display = "none";
     }
     if(collectAmt.value == 3)
     {
@@ -62,12 +62,7 @@ function buildShip()
     var popAmt = document.getElementById("population");
 
     //display village pop stats
-    if(shipAmt.value == 10)
-    {
-        shipBtn.style.opacity = "0.5";
-        shipBtn.disabled = true;
-    }
-    else
+    if(shipAmt.value < 10)
     {
         if(ironAmt.value >= (50 + 50*shipAmt.value))
         {
@@ -83,6 +78,13 @@ function buildShip()
         document.getElementById("opLabel").style.display = "none";  
         document.getElementById("mechLabel").style.display = "none";
         document.getElementById("population").style.display = "block";    
+    }
+    if(shipAmt.value == 10)
+    {
+        shipBtn.style.opacity = "0.5";
+        shipBtn.disabled = true;
+        document.getElementById("shipTT").style.display = "none";
+
     }
     if(shipAmt.value == 3)
     {
@@ -177,7 +179,7 @@ function buildSpaceHub()
 }
 
 function dynamicToolTip(ele){
-    if(ele.id="collectionButton"){
+    if(ele.id=="collectionBtn"){
         var podAmt = document.getElementById("collectionPodAmt");
         var cost = 10 + 10*podAmt.value;
         if(podAmt.value < 10){
@@ -186,7 +188,7 @@ function dynamicToolTip(ele){
         }
     }
 
-    if(ele.id="shipBtn"){
+    if(ele.id=="shipBtn"){
         var shipAmt = document.getElementById("shipAmt");
         var cost = 50 + 50*shipAmt.value;
         if(shipAmt.value < 10){

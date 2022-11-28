@@ -5,7 +5,7 @@ function mineIron() {//adds iron resources on click
     var ironAmt = document.getElementById("ironAmt");
     if(document.getElementById("o2TankAmt").value == 1)
     {
-        ironAmt.value = parseInt(ironAmt.value) + 10; //mine 10 iron per click
+        ironAmt.value = parseInt(ironAmt.value) + 100; //mine 10 iron per click
     }
     else
     {
