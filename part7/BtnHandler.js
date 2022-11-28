@@ -25,6 +25,7 @@ function sndMessage()
         document.getElementById("resourceTable").style.display = "block";
         document.getElementById("ironAmt").style.display = "block";
         document.getElementById("planetCoreAmt").style.display = "block";
+        eventText(Events(16));
     }
 }
 	//Update the text log 
@@ -99,6 +100,11 @@ function eventText(logText) {
     }
     else if (eventId == 15) {//player sets off
         return"the expedition ship returns from deep space";
+    
+    }
+
+    else if (eventId == 16) {
+        return"an abandoned harbour, surrounded by iron";
     
     }
   }
