@@ -13,11 +13,11 @@ function mineIron() {//adds iron resources on click
     }
     if(ironAmt.value >= 30)
     {
-        document.getElementById("buildBtns").style.display = "block"; 
+        document.getElementById("buildBtns").style.display = "block";
         document.getElementById("o2tankBtn").style.display = "block";
-        document.getElementById("collectionBtn").style.display = "block"; 
+        document.getElementById("collectionBtn").style.display = "block";
     }
-    
+
 }
 
 function checkPods() {//adds fuel resources on click
@@ -85,6 +85,61 @@ function mechanicManager() {
     let diff = getJobPopulation() - getPopulation();
 
     minerManager(-diff);
+}
+// timer for every ten seconds
+setInterval(autoMine, 10000);
+setInterval(autoRepair, 10000);
+setInterval(autoFuel, 10000);
+//keeps miners mining automatically once you have 5 miners
+function autoMine()
+{
+    let miners = document.getElementById("miner");
+    for (i = 1; i < miners.value; i++)
+    {
+        if (miners.value > 12)
+        {
+            ironAmt.value = parseInt(ironAmt.value) + 5
+        }
+        else
+        {
+            ironAmt.value = parseInt(ironAmt.value) + 2
+        }
+    }
+
+}
+// mechanics creating repair pack automatically
+function autoRepair()
+{
+    let mechanics = document.getElementById("mechanic");
+    for (i= 1; i < mechanics.value; i++)
+    {
+        if (mechanics.value > 7)
+        {
+            repairPackAmt.vlaue = parseInt(repairPackAmt.value) + 5
+        }
+        else
+        {
+            repairPackAmt.value = parseInt(repairPackAmt.value ) + 2
+        }
+
+    }
+
+}
+// operators "creating fuel"
+function autoFuel()
+{
+    let operators = document.getElementById("operator");
+    for (i =1; i < operators.value; i++)
+    {
+        if (operators.value > 8)
+        {
+            fuelAmt.value = parseInt(fuelAmt.vlaue) + 5
+        }
+        else
+        {
+            fuelAmt.value = parseInt(fuelAmt.value ) + 2
+        }
+    }
 }
 
 //population management works well all around
