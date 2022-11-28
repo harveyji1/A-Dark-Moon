@@ -263,17 +263,8 @@ function dynamicToolTip(ele){
         if(ele.id=="ironRate")
     {
         var minerAmt = document.getElementById("miner").value;
-        var ironRate = 0;
-        if (minerAmt > 12)
-        {
-            ironRate = minerAmt*5;
-        }
-
-        else if (minerAmt <=12 && minerAmt >=5)
-        {
-            ironRate = minerAmt*2;
-        }
-
+        var ironRate = minerAmt*2;
+   
         var span = document.getElementById("ironRateTT");
         span.textContent = ironRate + "/ 10 sec";
     }
@@ -281,17 +272,7 @@ function dynamicToolTip(ele){
     if(ele.id=="fuelRate")
     {
         var operatorAmt = document.getElementById("operator").value;
-        var fuelRate = 0;
-
-        if (operatorAmt > 8)
-        {
-            fuelRate = operatorAmt*5;
-        }
-
-        else 
-        {
-            fuelRate = operatorAmt*2;
-        }
+        var fuelRate = operatorAmt*2;
 
         var span = document.getElementById("fuelRateTT");
         span.textContent = fuelRate + "/ 10 sec";
@@ -300,16 +281,8 @@ function dynamicToolTip(ele){
     if(ele.id=="fuelRate")
     {
         var mechanicAmt = document.getElementById("mechanic").value;
-        var repairPackRate = 0;
-        if (mechanicAmt > 7)
-        {
-            repairPackRate = mechanicAmt*5;
-        }
+        var repairPackRate = mechanicAmt*2;
 
-        else 
-        {
-            repairPackRate = mechanicAmt*2;
-        }
         var span = document.getElementById("repairPackRateTT");
         span.textContent = repairPackRate + "/ 10 sec";
     }
