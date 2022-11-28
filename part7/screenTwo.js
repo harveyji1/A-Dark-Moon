@@ -94,16 +94,9 @@ setInterval(autoFuel, 10000);
 function autoMine()
 {
     let miners = document.getElementById("miner");
-    for (i = 1; i < miners.value; i++)
+    for (i = 0; i < miners.value; i++)
     {
-        if (miners.value > 12)
-        {
-            ironAmt.value = parseInt(ironAmt.value) + 5
-        }
-        else
-        {
-            ironAmt.value = parseInt(ironAmt.value) + 2
-        }
+          ironAmt.value = parseInt(ironAmt.value) + (miners.value * 2)
     }
 
 }
@@ -111,16 +104,9 @@ function autoMine()
 function autoRepair()
 {
     let mechanics = document.getElementById("mechanic");
-    for (i= 1; i < mechanics.value; i++)
+    for (i = 0; i < mechanics.value; i++)
     {
-        if (mechanics.value > 7)
-        {
-            repairPackAmt.vlaue = parseInt(repairPackAmt.value) + 5
-        }
-        else
-        {
-            repairPackAmt.value = parseInt(repairPackAmt.value ) + 2
-        }
+        repairPackAmt.value = parseInt(repairPackAmt.value) + (mechanics.value * 2)
 
     }
 
@@ -129,16 +115,10 @@ function autoRepair()
 function autoFuel()
 {
     let operators = document.getElementById("operator");
-    for (i =1; i < operators.value; i++)
+    for (i = 0; i < operators.value; i++)
     {
-        if (operators.value > 8)
-        {
-            fuelAmt.value = parseInt(fuelAmt.vlaue) + 5
-        }
-        else
-        {
-            fuelAmt.value = parseInt(fuelAmt.value ) + 2
-        }
+        fuelAmt.value = parseInt(fuelAmt.value) + (operators.value * 2)
+
     }
 }
 
