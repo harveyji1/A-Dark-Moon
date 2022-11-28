@@ -74,16 +74,16 @@
                 <th>Resource</th>
                 <th>Amount</th>
             </tr>
-            <tr>
-              <th>Iron</th>
+	    <tr>
+              <th id="ironRate" onmouseover="dynamicToolTip(this)"><div class="tooltip">Iron<span id="ironRateTT" class="tooltiptext">0 Iron/  10 sec</span></div></th>
               <th><input type="number" class="resources" id="ironAmt" value="0" max="9999" readonly></th>
           </tr>
             <tr>
-              <th>Fuel</th>
+              <th id="fuelRate" onmouseover="dynamicToolTip(this)"><div class="tooltip">Fuel<span id="fuelRateTT" class="tooltiptext">0 Fuel / 10 sec</span></div></th>
               <th><input type="number" class="resources" id="fuelAmt" value="0" max="9999" readonly></th>
             </tr>
             <tr>
-              <th>Repair Packs</th>
+              <th id="repairPackRate" onmouseover="dynamicToolTip(this)"><div class="tooltip">Repair Packs<span id="repairPackRateTT" class="tooltiptext">0 repairPack / 10 sec</span></div></th>
               <th><input type="number" class="resources" id="repairPackAmt" value="0" max="9999" readonly></th>
           </tr>
           <tr>
