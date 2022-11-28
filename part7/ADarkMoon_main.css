@@ -5,7 +5,6 @@ body {
 
 .split {
     height: 100%;
-    width: 80%;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -13,14 +12,18 @@ body {
 }
 
 .left {
+    width: 20%;
     left: 0;
     background-color: #111;
 }
 
 .right {
+    width: 80%;
+    padding-left: 15px;
     right: 0;
     background-color: #5A5A5A;
 }
+
 #homebound {
     font-family: Arial;
     color: black;
