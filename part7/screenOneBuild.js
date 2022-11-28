@@ -77,10 +77,12 @@ function buildShip()
         }
 
         document.getElementById("jobTable").style.display = "block";
-        document.getElementById("miner").style.display = "block";
-        document.getElementById("opLabel").style.display = "none";  
-        document.getElementById("mechLabel").style.display = "none";
-        document.getElementById("population").style.display = "block";    
+        document.getElementById("miner").style.display = "initial";
+        document.getElementById("population").style.display = "block";  
+        if (shipAmt.value <= 3) {
+            document.getElementById("opLabel").style.display = "none";  
+            document.getElementById("mechLabel").style.display = "none";
+        }  
     }
     if(shipAmt.value == 10)
     {
@@ -117,8 +119,8 @@ function buildRefinery()
         //text event
         eventText(Events(6));
         //display refinery stats
-        document.getElementById("operator").style.display = "block";
-        document.getElementById("opLabel").style.display = "block";
+        document.getElementById("operator").style.display = "initial";
+        document.getElementById("opLabel").style.display = "initial";
         document.getElementById("refineryAmt").style.display = "block";
         document.getElementById("refineryTT").style.display = "none";
 
@@ -143,7 +145,7 @@ function buildMechanic()
         //text event
         eventText(Events(7));
         //display mechanic stats
-        document.getElementById("mechanicAmt").style.display = "block";
+        document.getElementById("mechanicAmt").style.display = "initial";
         document.getElementById("mechanic").style.display = "initial";
         document.getElementById("mechLabel").style.display = "initial";
         document.getElementById("repairPackAmt").style.display = "block";
