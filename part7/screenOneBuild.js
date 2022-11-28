@@ -28,7 +28,9 @@ function buildPod()
         {
             //decrease iron amount by 10, increasing by 10 with each purchase
             ironAmt.value = ironAmt.value - (10 + 10*collectAmt.value); 
-            collectAmt.value ++; 
+            collectAmt.value ++;
+            //text event
+            eventText(Events(4));
         }
 
         //display pod stats
@@ -70,7 +72,8 @@ function buildShip()
             shipAmt.value++;
             populationChange(4);
             //popAmt.value = parseInt(popAmt.value) + 4;//increase pop by 4 each click
-            
+            //text event
+            eventText(Events(5));
         }
 
         document.getElementById("jobTable").style.display = "block";
@@ -111,7 +114,8 @@ function buildRefinery()
 
         refineryBtn.style.opacity = "0.5";
         refineryBtn.disabled = true;
-
+        //text event
+        eventText(Events(6));
         //display refinery stats
         document.getElementById("operator").style.display = "block";
         document.getElementById("opLabel").style.display = "block";
@@ -136,7 +140,8 @@ function buildMechanic()
 
         mechanicBtn.style.opacity = "0.5";
         mechanicBtn.disabled = true; 
-
+        //text event
+        eventText(Events(7));
         //display mechanic stats
         document.getElementById("mechanicAmt").style.display = "block";
         document.getElementById("mechanic").style.display = "initial";
@@ -164,6 +169,8 @@ function buildSpaceHub()
         spaceHubBtn.style.opacity = "0.5";
         spaceHubBtn.disabled = true; 
 
+        //text event
+        eventText(Events(8));
         //display spacehub stats
         document.getElementById("buyBtns").style.display = "block";
         document.getElementById("spaceHubAmt").style.display = "block"; 
