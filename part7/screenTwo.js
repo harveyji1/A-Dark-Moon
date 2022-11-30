@@ -94,32 +94,32 @@ setInterval(autoFuel, 10000);
 function autoMine()
 {
     let miners = document.getElementById("miner");
-    for (i = 0; i < miners.value; i++)
-    {
+    //for (i = 0; i < miners.value; i++)
+    //{
           ironAmt.value = parseInt(ironAmt.value) + (miners.value * 2)
-    }
+    //}
 
 }
 // mechanics creating repair pack automatically
 function autoRepair()
 {
     let mechanics = document.getElementById("mechanic");
-    for (i = 0; i < mechanics.value; i++)
-    {
+    //for (i = 0; i < mechanics.value; i++)
+    //{
         repairPackAmt.value = parseInt(repairPackAmt.value) + (mechanics.value * 2)
 
-    }
+    //}
 
 }
 // operators "creating fuel"
 function autoFuel()
 {
     let operators = document.getElementById("operator");
-    for (i = 0; i < operators.value; i++)
-    {
+    //for (i = 0; i < operators.value; i++)
+    //{
         fuelAmt.value = parseInt(fuelAmt.value) + (operators.value * 2)
 
-    }
+    //}
 }
 
 //population management works well all around

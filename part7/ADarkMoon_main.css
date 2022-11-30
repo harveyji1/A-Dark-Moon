@@ -78,7 +78,7 @@ input[type=number] {
     border: 1px solid black;
     clear: right;
     position: absolute;
-    bottom: 15%;
+    bottom: 5%;
     left: 450px;
 }
 #pageTwoBtns{
